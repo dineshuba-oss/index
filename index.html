@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags for SEO Optimization -->
+    <meta name="description" content="AnveX TechnoLab - Next-Gen ICT Hub in Dhangadhi, Nepal. Professional ICT services, AI automation, enterprise ERP setups, and industry-ready technology training.">
+    <meta name="keywords" content="AnveX TechnoLab, Best IT Institute Dhangadhi, ICT Solutions Nepal, AI Training Dhangadhi, Computer Course Dhangadhi, Cyber Security Nepal">
     <title>AnveX TechnoLab | Smart ICT Solutions & AI Training Nepal</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -93,26 +96,27 @@
                 <a href="#about" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-cyanaccent transition-colors">About</a>
                 <a href="#training" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-cyanaccent transition-colors">Training</a>
                 <a href="#services" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-cyanaccent transition-colors">ICT Services</a>
-                <a href="#why-choose" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-cyanaccent transition-colors">Why Us</a>
+                <a href="#testimonials" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-cyanaccent transition-colors">Reviews</a>
+                <a href="#inquiry" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-cyanaccent transition-colors">Contact</a>
             </nav>
 
             <!-- Right Actions -->
             <div class="hidden md:flex items-center space-x-4">
-                <a href="#training" class="relative group overflow-hidden rounded-full p-[1px] focus:outline-none">
+                <a href="#inquiry" class="relative group overflow-hidden rounded-full p-[1px] focus:outline-none">
                     <span class="absolute inset-0 bg-gradient-to-r from-cyanaccent to-blue-500 rounded-full"></span>
                     <span class="relative block px-5 py-2 rounded-full bg-darknavy text-sm font-medium text-white transition-all group-hover:bg-transparent">
                         Enroll Now
                     </span>
                 </a>
-                <button class="flex items-center space-x-2 bg-gradient-to-r from-cyanaccent to-blue-600 text-darknavy font-semibold text-sm px-5 py-2.5 rounded-full shadow-glow hover:brightness-110 transition-all">
-                    <i class="fa-solid fa-robot-tech fa-robot"></i>
+                <button onclick="toggleChat()" class="flex items-center space-x-2 bg-gradient-to-r from-cyanaccent to-blue-600 text-darknavy font-semibold text-sm px-5 py-2.5 rounded-full shadow-glow hover:brightness-110 transition-all">
+                    <i class="fa-solid fa-robot"></i>
                     <span>AI Assistant</span>
                 </button>
             </div>
 
             <!-- Mobile Hamburger Menu Icon -->
             <div class="lg:hidden flex items-center">
-                <button id="mobile-menu-btn" class="text-gray-400 hover:text-white focus:outline-none">
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-white focus:outline-none">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -124,10 +128,11 @@
             <a href="#about" class="block text-gray-300">About</a>
             <a href="#training" class="block text-gray-300">Training</a>
             <a href="#services" class="block text-gray-300">ICT Services</a>
-            <a href="#why-choose" class="block text-gray-300">Why Us</a>
+            <a href="#testimonials" class="block text-gray-300">Reviews</a>
+            <a href="#inquiry" class="block text-gray-300">Contact</a>
             <div class="pt-4 flex flex-col space-y-3">
-                <a href="#training" class="text-center bg-gray-800 text-white text-sm py-2.5 rounded-lg">Enroll Now</a>
-                <button class="bg-cyanaccent text-darknavy font-semibold text-sm py-2.5 rounded-lg flex items-center justify-center space-x-2">
+                <a href="#inquiry" class="text-center bg-gray-800 text-white text-sm py-2.5 rounded-lg">Enroll Now</a>
+                <button onclick="toggleChat()" class="bg-cyanaccent text-darknavy font-semibold text-sm py-2.5 rounded-lg flex items-center justify-center space-x-2">
                     <i class="fa-solid fa-robot"></i><span>AI Assistant</span>
                 </button>
             </div>
@@ -138,7 +143,6 @@
     <!-- HERO SECTION -->
     <!-- ------------------------------------------------ -->
     <section id="home" class="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden z-10">
-        <!-- Holographic Background Element -->
         <div class="absolute top-1/4 right-0 w-96 h-96 bg-cyanaccent/10 rounded-full filter blur-[120px] pointer-events-none"></div>
         <div class="absolute bottom-1/4 left-0 w-96 h-96 bg-blue-600/10 rounded-full filter blur-[120px] pointer-events-none"></div>
         
@@ -147,7 +151,7 @@
             <!-- Left Info Content -->
             <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
                 <div class="inline-flex items-center space-x-2 bg-cyanaccent/10 border border-cyanaccent/30 text-cyanaccent px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
-                    <i class="fa-solid fa-microchip animate-spin-slow"></i>
+                    <i class="fa-solid fa-microchip"></i>
                     <span>Next-Gen ICT Hub in Dhangadhi</span>
                 </div>
                 
@@ -169,19 +173,18 @@
                     <a href="#services" class="px-8 py-4 bg-navysecondary border border-gray-700 text-gray-200 font-medium rounded-xl hover:bg-gray-800 transition-colors">
                         Our Services
                     </a>
-                    <button class="w-full sm:w-auto flex items-center justify-center space-x-2 px-6 py-4 bg-cyanaccent/10 border border-cyanaccent/30 text-cyanaccent font-medium rounded-xl hover:bg-cyanaccent/20 transition-all">
+                    <button onclick="toggleChat()" class="w-full sm:w-auto flex items-center justify-center space-x-2 px-6 py-4 bg-cyanaccent/10 border border-cyanaccent/30 text-cyanaccent font-medium rounded-xl hover:bg-cyanaccent/20 transition-all">
                         <i class="fa-solid fa-comment-dots"></i>
                         <span>Chat with AI Assistant</span>
                     </button>
                 </div>
             </div>
 
-            <!-- Right Visual Graphic (Futuristic Office Interface mockup) -->
+            <!-- Right Visual Graphic -->
             <div class="lg:col-span-5 relative flex justify-center">
                 <div class="relative w-full max-w-md aspect-square rounded-3xl glassmorphism p-6 border border-cyanaccent/20 flex flex-col justify-between shadow-glass overflow-hidden group">
                     <div class="absolute -top-10 -right-10 w-40 h-40 bg-cyanaccent/20 rounded-full blur-2xl"></div>
                     
-                    <!-- Interface Header mock -->
                     <div class="flex items-center justify-between border-b border-gray-800 pb-4">
                         <div class="flex items-center space-x-2">
                             <span class="w-3 h-3 rounded-full bg-red-500"></span>
@@ -191,7 +194,6 @@
                         <span class="text-xs text-gray-500 font-mono tracking-widest">ANVEX_SYSTEM_V3.0</span>
                     </div>
 
-                    <!-- Inner Digital Visualizer Graphics -->
                     <div class="my-auto py-8 space-y-6">
                         <div class="flex items-center space-x-4 p-3 bg-darknavy/50 rounded-xl border border-gray-800">
                             <div class="w-12 h-12 bg-cyanaccent/10 rounded-lg flex items-center justify-center text-cyanaccent text-xl">
@@ -216,13 +218,11 @@
                         </div>
                     </div>
 
-                    <!-- Interface Footer -->
                     <div class="text-center pt-4 border-t border-gray-800">
                         <span class="text-xs text-cyanaccent font-mono"><i class="fa-solid fa-satellite-dish mr-2 animate-pulse"></i>DHANGADHI CORE NODE CONNECTED</span>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -240,9 +240,7 @@
                 </p>
             </div>
 
-            <!-- Features Quick-Grid Matrix Layout -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Competency Item -->
                 <div class="p-6 rounded-2xl bg-darknavy/40 border border-gray-800/80 hover:border-cyanaccent/30 transition-all flex space-x-4">
                     <div class="text-cyanaccent text-2xl mt-1"><i class="fa-solid fa-server"></i></div>
                     <div>
@@ -250,7 +248,6 @@
                         <p class="text-sm text-gray-400 mt-1">Full spectrum framework design, system deployment, and asset life cycle optimizations.</p>
                     </div>
                 </div>
-                <!-- Competency Item -->
                 <div class="p-6 rounded-2xl bg-darknavy/40 border border-gray-800/80 hover:border-cyanaccent/30 transition-all flex space-x-4">
                     <div class="text-cyanaccent text-2xl mt-1"><i class="fa-solid fa-robot"></i></div>
                     <div>
@@ -258,36 +255,11 @@
                         <p class="text-sm text-gray-400 mt-1">Custom natural language agents and workflow automation targeting organizational pipelines.</p>
                     </div>
                 </div>
-                <!-- Competency Item -->
                 <div class="p-6 rounded-2xl bg-darknavy/40 border border-gray-800/80 hover:border-cyanaccent/30 transition-all flex space-x-4">
                     <div class="text-cyanaccent text-2xl mt-1"><i class="fa-solid fa-chart-pie"></i></div>
                     <div>
                         <h4 class="text-lg font-semibold text-white">ERP Architectures</h4>
                         <p class="text-sm text-gray-400 mt-1">Unified systems engineered for corporate, education, and retail environments to run seamlessly.</p>
-                    </div>
-                </div>
-                <!-- Competency Item -->
-                <div class="p-6 rounded-2xl bg-darknavy/40 border border-gray-800/80 hover:border-cyanaccent/30 transition-all flex space-x-4">
-                    <div class="text-cyanaccent text-2xl mt-1"><i class="fa-solid fa-headset"></i></div>
-                    <div>
-                        <h4 class="text-lg font-semibold text-white">Remote Technical Desk</h4>
-                        <p class="text-sm text-gray-400 mt-1">24/7 continuous online workspace administration, troubleshooting diagnostics, and support.</p>
-                    </div>
-                </div>
-                <!-- Competency Item -->
-                <div class="p-6 rounded-2xl bg-darknavy/40 border border-gray-800/80 hover:border-cyanaccent/30 transition-all flex space-x-4">
-                    <div class="text-cyanaccent text-2xl mt-1"><i class="fa-solid fa-shield-halved"></i></div>
-                    <div>
-                        <h4 class="text-lg font-semibold text-white">Network & CCTV Security</h4>
-                        <p class="text-sm text-gray-400 mt-1">State-of-the-art layout architectures, structural routing setups, and security audit assessments.</p>
-                    </div>
-                </div>
-                <!-- Competency Item -->
-                <div class="p-6 rounded-2xl bg-darknavy/40 border border-gray-800/80 hover:border-cyanaccent/30 transition-all flex space-x-4">
-                    <div class="text-cyanaccent text-2xl mt-1"><i class="fa-solid fa-user-tie"></i></div>
-                    <div>
-                        <h4 class="text-lg font-semibold text-white">Advanced Hybrid Academics</h4>
-                        <p class="text-sm text-gray-400 mt-1">Professional certifications hosted simultaneously live online and onsite in our labs.</p>
                     </div>
                 </div>
             </div>
@@ -309,9 +281,8 @@
                 </div>
             </div>
 
-            <!-- Premium Cards Grid -->
+            <!-- Cards Grid (With Functional Modal Links) -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
                 <!-- Card 1 -->
                 <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
                     <div>
@@ -326,7 +297,7 @@
                     </div>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-800/60">
                         <span class="text-xs text-gray-400"><i class="fa-solid fa-location-dot mr-1.5 text-cyanaccent"></i>Online + Physical</span>
-                        <a href="#" class="text-sm font-semibold text-cyanaccent hover:underline">View Syllabus <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+                        <button onclick="openModal('AI for Teachers', '• Introduction to Generative AI in Education<br>• Automated Lesson Planning Tools<br>• Smart Grading and Evaluation Modules<br>• AI Prompts Engineering for Academic Workflows')" class="text-sm font-semibold text-cyanaccent hover:underline flex items-center">View Syllabus <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></button>
                     </div>
                 </div>
 
@@ -344,7 +315,7 @@
                     </div>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-800/60">
                         <span class="text-xs text-gray-400"><i class="fa-solid fa-location-dot mr-1.5 text-cyanaccent"></i>Physical Only</span>
-                        <a href="#" class="text-sm font-semibold text-cyanaccent hover:underline">View Syllabus <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+                        <button onclick="openModal('Cyber Security Foundations', '• Networking Basics & Threat Vector Analysis<br>• Ethical Hacking & Vulnerability Assessment<br>• Firewall Configuration & System Hardening<br>• Incident Response & Local Security Audits')" class="text-sm font-semibold text-cyanaccent hover:underline flex items-center">View Syllabus <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></button>
                     </div>
                 </div>
 
@@ -362,67 +333,12 @@
                     </div>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-800/60">
                         <span class="text-xs text-gray-400"><i class="fa-solid fa-location-dot mr-1.5 text-cyanaccent"></i>Online + Physical</span>
-                        <a href="#" class="text-sm font-semibold text-cyanaccent hover:underline">View Syllabus <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+                        <button onclick="openModal('IT Support Technician', '• Computer Hardware Assembly & Diagnostics<br>• OS Deployment (Windows/Linux) & Management<br>• Enterprise Network Configuration & Infrastructure<br>• Helpdesk Remote Troubleshooting Mechanisms')" class="text-sm font-semibold text-cyanaccent hover:underline flex items-center">View Syllabus <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></button>
                     </div>
                 </div>
-
-                <!-- Card 4 -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 rounded-xl bg-cyanaccent/10 flex items-center justify-center text-cyanaccent text-xl">
-                                <i class="fa-solid fa-bullhorn"></i>
-                            </div>
-                            <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-cyanaccent text-darknavy">Beginner Friendly</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-white mb-2">Digital Marketing</h4>
-                        <p class="text-sm text-gray-400 mb-6">Search engine optimizations, precise programmatic conversion funnels, algorithmic local positioning, and metric workflows.</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-4 border-t border-gray-800/60">
-                        <span class="text-xs text-gray-400"><i class="fa-solid fa-location-dot mr-1.5 text-cyanaccent"></i>Online Only</span>
-                        <a href="#" class="text-sm font-semibold text-cyanaccent hover:underline">View Syllabus <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 rounded-xl bg-cyanaccent/10 flex items-center justify-center text-cyanaccent text-xl">
-                                <i class="fa-solid fa-paste"></i>
-                            </div>
-                            <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-cyanaccent text-darknavy">Beginner Friendly</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-white mb-2">Office Package Training</h4>
-                        <p class="text-sm text-gray-400 mb-6">Professional document standard creation, complex spreadsheet analytical processing, and data presentation principles.</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-4 border-t border-gray-800/60">
-                        <span class="text-xs text-gray-400"><i class="fa-solid fa-location-dot mr-1.5 text-cyanaccent"></i>Online + Physical</span>
-                        <a href="#" class="text-sm font-semibold text-cyanaccent hover:underline">View Syllabus <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 rounded-xl bg-cyanaccent/10 flex items-center justify-center text-cyanaccent text-xl">
-                                <i class="fa-solid fa-display"></i>
-                            </div>
-                            <span class="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-cyanaccent text-darknavy">Beginner Friendly</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-white mb-2">Basic Computer Course</h4>
-                        <p class="text-sm text-gray-400 mb-6">Core system introduction, operating mechanics, essential navigation web tools, and fundamental digital literacy layout concepts.</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-4 border-t border-gray-800/60">
-                        <span class="text-xs text-gray-400"><i class="fa-solid fa-location-dot mr-1.5 text-cyanaccent"></i>Physical Only</span>
-                        <a href="#" class="text-sm font-semibold text-cyanaccent hover:underline">View Syllabus <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Supplemental Non-Technical Section Row -->
+            <!-- Corporate tracks view fix -->
             <div class="mt-12 p-6 rounded-2xl glassmorphism border border-gray-800 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="flex items-center space-x-4">
                     <div class="text-cyanaccent text-3xl"><i class="fa-solid fa-comments"></i></div>
@@ -431,9 +347,9 @@
                         <p class="text-sm text-gray-400">Corporate communication frameworks, dynamic presentation posture, technical workspace interviews, and remote project management ethics.</p>
                     </div>
                 </div>
-                <a href="#" class="w-full md:w-auto text-center px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-medium text-sm rounded-xl transition-colors whitespace-nowrap">
+                <button onclick="openModal('Corporate Track Ecosystem', '• Advanced Corporate Communication & Pitching<br>• Technical Interview Simulation Workshops<br>• Global Remote Project Management Tools (Agile/Jira)<br>• Workspace Collaboration Ethics')" class="w-full md:w-auto text-center px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-medium text-sm rounded-xl transition-colors whitespace-nowrap">
                     Explore Corporate Tracks
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -450,168 +366,255 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Service Item 1 -->
                 <div class="p-8 rounded-2xl bg-darknavy/60 border border-gray-800 hover:border-cyanaccent/40 transition-all group">
                     <div class="text-cyanaccent text-3xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-headset"></i></div>
                     <h4 class="text-xl font-bold text-white mb-3">End User Technical Support</h4>
                     <p class="text-sm text-gray-400 leading-relaxed">Direct hardware lifecycle support, desktop troubleshooting diagnostics, systematic workspace provisioning, and software validation maintenance frameworks.</p>
                 </div>
-
-                <!-- Service Item 2 -->
                 <div class="p-8 rounded-2xl bg-darknavy/60 border border-gray-800 hover:border-cyanaccent/40 transition-all group">
                     <div class="text-cyanaccent text-3xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-network-wired"></i></div>
                     <h4 class="text-xl font-bold text-white mb-3">Network Solutions</h4>
                     <p class="text-sm text-gray-400 leading-relaxed">Architecting complete system local loop networks, managed security gateways, redundant routing design layouts, and performance traffic assessments.</p>
                 </div>
-
-                <!-- Service Item 3 -->
                 <div class="p-8 rounded-2xl bg-darknavy/60 border border-gray-800 hover:border-cyanaccent/40 transition-all group">
                     <div class="text-cyanaccent text-3xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-brain"></i></div>
                     <h4 class="text-xl font-bold text-white mb-3">AI Agents & Automation</h4>
                     <p class="text-sm text-gray-400 leading-relaxed">Deploying cognitive task-runners, machine learning workflows, natural customer interaction handlers, and structured automation frameworks.</p>
                 </div>
-
-                <!-- Service Item 4 -->
-                <div class="p-8 rounded-2xl bg-darknavy/60 border border-gray-800 hover:border-cyanaccent/40 transition-all group">
-                    <div class="text-cyanaccent text-3xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-chart-line"></i></div>
-                    <h4 class="text-xl font-bold text-white mb-3">ERP Solutions</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Integration architectures linking finance, supply pipelines, employee rosters, and systemic control parameters into unified dashboards.</p>
-                </div>
-
-                <!-- Service Item 5 -->
-                <div class="p-8 rounded-2xl bg-darknavy/60 border border-gray-800 hover:border-cyanaccent/40 transition-all group">
-                    <div class="text-cyanaccent text-3xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-eye"></i></div>
-                    <h4 class="text-xl font-bold text-white mb-3">CCTV Troubleshooting</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Advanced video matrix network audits, persistent NVR setup maintenance, surveillance feed matrix diagnostics, and remote vault link configurations.</p>
-                </div>
-
-                <!-- Service Item 6 -->
-                <div class="p-8 rounded-2xl bg-darknavy/60 border border-gray-800 hover:border-cyanaccent/40 transition-all group">
-                    <div class="text-cyanaccent text-3xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-user-gear"></i></div>
-                    <h4 class="text-xl font-bold text-white mb-3">Virtual Assistant Services</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">High-level executive back-office task delegation, schedule automation processing, multi-channel intake management, and dedicated operational support desks.</p>
-                </div>
-
             </div>
         </div>
     </section>
 
     <!-- ------------------------------------------------ -->
-    <!-- WHY CHOOSE US & METRICS -->
+    <!-- NEW SECTION: TESTIMONIALS / REVIEWS -->
     <!-- ------------------------------------------------ -->
-    <section id="why-choose" class="py-24 relative z-10 border-t border-gray-900">
+    <section id="testimonials" class="py-24 relative z-10 border-t border-gray-900/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                
-                <!-- Left Details Text Block -->
-                <div class="lg:col-span-5 space-y-6">
-                    <h2 class="text-xs uppercase font-bold text-cyanaccent tracking-widest">Engineered for Success</h2>
-                    <h3 class="text-3xl font-extrabold text-white">Why Modern Organizations Align With AnveX</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        We blend regional structural understanding with next-generation development principles, supplying unmatched professional response parameters and premium academic excellence.
-                    </p>
-                    
-                    <!-- Performance Counter Dashboard Grid -->
-                    <div class="grid grid-cols-3 gap-4 pt-4">
-                        <div class="p-4 rounded-xl bg-navysecondary/60 border border-gray-800 text-center">
-                            <p class="text-2xl font-bold text-white font-mono">1,200+</p>
-                            <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Students Trained</p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-navysecondary/60 border border-gray-800 text-center">
-                            <p class="text-2xl font-bold text-white font-mono">85+</p>
-                            <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Businesses Supported</p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-navysecondary/60 border border-gray-800 text-center">
-                            <p class="text-2xl font-bold text-white font-mono">240+</p>
-                            <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Projects Completed</p>
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs uppercase font-bold text-cyanaccent tracking-widest">Success Stories</h2>
+                <h3 class="text-3xl font-extrabold text-white">What Our Partners & Students Say</h3>
+                <div class="h-1 w-20 bg-gradient-to-r from-cyanaccent to-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                    <p class="text-gray-300 text-sm italic leading-relaxed">"AnveX customized an automated ERP network configuration for our academic system. The system efficiency and local tech support are extraordinary."</p>
+                    <div class="flex items-center space-x-3 mt-6 border-t border-gray-800 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-cyanaccent/20 flex items-center justify-center text-cyanaccent font-bold">RB</div>
+                        <div>
+                            <h5 class="text-sm font-semibold text-white">Ramesh Bhatta</h5>
+                            <p class="text-[11px] text-gray-500">School Director, Dhangadhi</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Right Matrix Blocks Grid Layout -->
-                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="p-5 glassmorphism rounded-xl border-l-4 border-l-cyanaccent space-y-2">
-                        <h4 class="text-base font-bold text-white">Practical Training Frameworks</h4>
-                        <p class="text-xs text-gray-400">Zero fluff policy. Every single hour spent within our curriculum targets actionable building cycles and real live test parameters.</p>
-                    </div>
-                    <div class="p-5 glassmorphism rounded-xl border-l-4 border-l-blue-500 space-y-2">
-                        <h4 class="text-base font-bold text-white">Fast Technical Response Desk</h4>
-                        <p class="text-xs text-gray-400">Rigid SLA timelines mapping quick deployment turnarounds to isolate, analyze, and resolve operational server and network degradation issues.</p>
-                    </div>
-                    <div class="p-5 glassmorphism rounded-xl border-l-4 border-l-indigo-500 space-y-2">
-                        <h4 class="text-base font-bold text-white">Industry-Oriented Curriculums</h4>
-                        <p class="text-xs text-gray-400">Direct integration alongside cloud pipelines ensuring our graduates comprehend next-generation automation frameworks perfectly.</p>
-                    </div>
-                    <div class="p-5 glassmorphism rounded-xl border-l-4 border-l-purple-500 space-y-2">
-                        <h4 class="text-base font-bold text-white">Affordable Strategic Pricing</h4>
-                        <p class="text-xs text-gray-400">Tailored corporate models and tiered educational pricing designed to maximize regional economic feasibility seamlessly.</p>
+                <!-- Review 2 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                    <p class="text-gray-300 text-sm italic leading-relaxed">"The 'AI for Teachers' training changed how I build my lectures. Truly high-tech setup right here in Far-West region."</p>
+                    <div class="flex items-center space-x-3 mt-6 border-t border-gray-800 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-cyanaccent/20 flex items-center justify-center text-cyanaccent font-bold">KS</div>
+                        <div>
+                            <h5 class="text-sm font-semibold text-white">Kiran Shah</h5>
+                            <p class="text-[11px] text-gray-500">Secondary Level Educator</p>
+                        </div>
                     </div>
                 </div>
-
+                <!-- Review 3 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                    <p class="text-gray-300 text-sm italic leading-relaxed">"Completed my Cyber Security lab tracks here. The active operational workflows helped me grab a remote IT assistant node easily."</p>
+                    <div class="flex items-center space-x-3 mt-6 border-t border-gray-800 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-cyanaccent/20 flex items-center justify-center text-cyanaccent font-bold">DC</div>
+                        <div>
+                            <h5 class="text-sm font-semibold text-white">Deepak Chaudhary</h5>
+                            <p class="text-[11px] text-gray-500">Alumni / Systems Tech</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ------------------------------------------------ -->
-    <!-- FOOTER SYSTEM SECTION -->
+    <!-- NEW SECTION: INQUIRY & ENROLLMENT FORM -->
     <!-- ------------------------------------------------ -->
-    <footer class="bg-navysecondary border-t border-gray-800 text-gray-400 text-sm py-12 relative z-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div class="space-y-4">
-                <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 rounded bg-cyanaccent flex items-center justify-center text-darknavy text-base font-bold"><i class="fa-solid fa-cube"></i></div>
-                    <span class="text-white font-bold tracking-tight">AnveX TechnoLab</span>
+    <section id="inquiry" class="py-24 bg-navysecondary/30 relative z-10 border-t border-gray-900/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glassmorphism p-8 rounded-3xl border border-cyanaccent/20 shadow-glass">
+                <div class="text-center mb-8 space-y-2">
+                    <h3 class="text-2xl font-bold text-white">Connect with Our Tech Nodes</h3>
+                    <p class="text-sm text-gray-400">Enroll in professional courses or request an enterprise service architecture consultation.</p>
                 </div>
-                <p class="text-xs text-gray-500 leading-relaxed">
-                    Premium Smart ICT Solutions & Next-Gen Professional Technological Training Protocols based in Dhangadhi, Nepal.
-                </p>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Explore Solutions</h4>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="#services" class="hover:text-cyanaccent transition-colors">AI & Automation Architectures</a></li>
-                    <li><a href="#services" class="hover:text-cyanaccent transition-colors">Corporate Network Infrastructures</a></li>
-                    <li><a href="#services" class="hover:text-cyanaccent transition-colors">Enterprise ERP Modules</a></li>
-                    <li><a href="#services" class="hover:text-cyanaccent transition-colors">Remote Technical Help Desk</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Academic Hub</h4>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="#training" class="hover:text-cyanaccent transition-colors">AI Educational Integrations</a></li>
-                    <li><a href="#training" class="hover:text-cyanaccent transition-colors">Cyber Threat Framework Tracks</a></li>
-                    <li><a href="#training" class="hover:text-cyanaccent transition-colors">IT Support Specialist Certification</a></li>
-                    <li><a href="#training" class="hover:text-cyanaccent transition-colors">Digital Marketing Optimization</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Dhangadhi Headquarters</h4>
-                <p class="text-xs text-gray-500 leading-relaxed mb-2">
-                    Main Campus Street, Ward 04,<br>Dhangadhi, Kailali, Nepal
-                </p>
-                <p class="text-xs text-cyanaccent font-mono">info@anvextechnolab.com</p>
+
+                <form onsubmit="handleForm(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Full Name</label>
+                            <input type="text" required class="w-full bg-darknavy/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyanaccent transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Email Address</label>
+                            <input type="email" required class="w-full bg-darknavy/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyanaccent transition-all">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Phone / WhatsApp</label>
+                            <input type="tel" required class="w-full bg-darknavy/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyanaccent transition-all" placeholder="+977">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Inquiry Type</label>
+                            <select class="w-full bg-darknavy/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyanaccent transition-all">
+                                <option value="course">Course Registration / Training</option>
+                                <option value="service">Corporate ICT Framework Audit</option>
+                                <option value="ai">Custom AI Agents Setup Consultation</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Additional Specifications / Message</label>
+                        <textarea rows="4" class="w-full bg-darknavy/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyanaccent transition-all" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gradient-to-r from-cyanaccent to-blue-600 text-darknavy font-bold text-sm py-4 rounded-xl shadow-glow hover:brightness-110 transition-all uppercase tracking-wider">
+                        Dispatch Inquiry Signal
+                    </button>
+                </form>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-gray-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
-            <p>&copy; 2026 AnveX TechnoLab. All Rights Reserved throughout Nepal.</p>
-            <div class="flex space-x-4">
-                <a href="#" class="hover:text-cyanaccent"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="hover:text-cyanaccent"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-cyanaccent"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="hover:text-cyanaccent"><i class="fa-brands fa-github"></i></a>
+    </section>
+
+    <!-- ------------------------------------------------ -->
+    <!-- FOOTER SECTION -->
+    <!-- ------------------------------------------------ -->
+    <footer class="bg-darknavy border-t border-gray-900 py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+            <div>
+                <h4 class="text-white font-bold text-lg">AnveX <span class="text-cyanaccent font-medium">TechnoLab</span></h4>
+                <p class="text-xs text-gray-500 mt-2">Dhangadhi, Kailali, Far-West Province, Nepal</p>
+                <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-phone text-cyanaccent mr-1"></i> +977-98XXXXXXXX | info@anvextechnolab.com</p>
+            </div>
+            <div class="flex justify-center space-x-6 text-xl">
+                <a href="#" class="text-gray-500 hover:text-cyanaccent transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-gray-500 hover:text-cyanaccent transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="text-gray-500 hover:text-cyanaccent transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-gray-500 hover:text-cyanaccent transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="md:text-right text-xs text-gray-500">
+                &copy; 2026 AnveX TechnoLab. All core interfaces connected.
             </div>
         </div>
     </footer>
 
-    <!-- Responsive Hamburger Menu Toggle Logic Script -->
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
+    <!-- ------------------------------------------------ -->
+    <!-- MODAL POPUP (SYLLABUS VIEWER) -->
+    <!-- ------------------------------------------------ -->
+    <div id="syllabusModal" class="fixed inset-0 bg-darknavy/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="glassmorphism w-full max-w-lg rounded-2xl border border-cyanaccent/30 p-6 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">&times;</button>
+            <div class="flex items-center space-x-3 text-cyanaccent mb-4">
+                <i class="fa-solid fa-file-code text-2xl"></i>
+                <h4 id="modalTitle" class="text-xl font-bold text-white">Course Syllabus</h4>
+            </div>
+            <div id="modalBody" class="text-sm text-gray-300 space-y-2 leading-relaxed bg-darknavy/40 p-4 rounded-xl border border-gray-800">
+                <!-- Data injection point -->
+            </div>
+            <button onclick="closeModal()" class="mt-6 w-full py-2.5 bg-gray-800 hover:bg-gray-700 text-white font-medium text-xs rounded-xl transition-all">Close Core Screen</button>
+        </div>
+    </div>
 
-        btn.addEventListener('click', () => {
+    <!-- ------------------------------------------------ -->
+    <!-- INTERACTIVE DYNAMIC AI ASSISTANT CHATBOT -->
+    <!-- ------------------------------------------------ -->
+    <div id="aiChatWidget" class="fixed bottom-6 right-6 z-50 hidden flex-col w-80 sm:w-96 h-[450px] glassmorphism border border-cyanaccent/30 rounded-2xl shadow-glow overflow-hidden">
+        <div class="bg-gradient-to-r from-navysecondary to-darknavy p-4 border-b border-gray-800 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></div>
+                <span class="text-xs font-mono text-cyanaccent tracking-wider">ANVEX_AI_CORE_V1</span>
+            </div>
+            <button onclick="toggleChat()" class="text-gray-400 hover:text-white">&times;</button>
+        </div>
+        <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3 text-xs">
+            <div class="bg-cyanaccent/10 text-cyanaccent p-3 rounded-xl max-w-[85%] border border-cyanaccent/20">
+                Hello! Welcome to AnveX TechnoLab node network. How can I assist you with our ICT services or course registrations today?
+            </div>
+        </div>
+        <div class="p-3 bg-darknavy/80 border-t border-gray-800 flex gap-2">
+            <input type="text" id="chatInput" placeholder="Ask AI Assistant..." class="flex-1 bg-navysecondary border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-cyanaccent">
+            <button onclick="sendChatMessage()" class="bg-cyanaccent text-darknavy px-3 rounded-lg text-xs font-bold hover:bg-cyanglow"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------ -->
+    <!-- DYNAMIC JAVASCRIPTLOGIC CONTROL -->
+    <!-- ------------------------------------------------ -->
+    <script>
+        // Mobile Navigation Toggle Controller
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
-        });
+        }
+
+        // Syllabus Modal Controller Mechanisms
+        function openModal(title, details) {
+            document.getElementById('modalTitle').innerText = title + ' Syllabus';
+            document.getElementById('modalBody').innerHTML = details;
+            const modal = document.getElementById('syllabusModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        function closeModal() {
+            const modal = document.getElementById('syllabusModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Form Inquiry Handler Trigger Simulation
+        function handleForm(e) {
+            e.preventDefault();
+            alert('Signal dispatched successfully! AnveX core system coordinators will connect shortly.');
+            e.target.reset();
+        }
+
+        // AI Chatbot Dynamic Engine Controller Simulation
+        function toggleChat() {
+            const chat = document.getElementById('aiChatWidget');
+            chat.classList.toggle('hidden');
+            if(!chat.classList.contains('hidden')) {
+                chat.classList.add('flex');
+            }
+        }
+        function sendChatMessage() {
+            const input = document.getElementById('chatInput');
+            const messagesContainer = document.getElementById('chatMessages');
+            if (!input.value.trim()) return;
+
+            // Append User message
+            const userDiv = document.createElement('div');
+            userDiv.className = "bg-gray-800 text-white p-3 rounded-xl max-w-[85%] ml-auto text-right";
+            userDiv.innerText = input.value;
+            messagesContainer.appendChild(userDiv);
+            
+            const userMsg = input.value.toLowerCase();
+            input.value = '';
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+            // Generate System Intelligence Response
+            setTimeout(() => {
+                const aiDiv = document.createElement('div');
+                aiDiv.className = "bg-cyanaccent/10 text-cyanaccent p-3 rounded-xl max-w-[85%] border border-cyanaccent/20";
+                
+                if(userMsg.includes('course') || userMsg.includes('training') || userMsg.includes('fee')) {
+                    aiDiv.innerText = "We feature specialized training modules including AI for Teachers, Cyber Security, and IT Support Systems. You can dispatch your core specifics via our Inquiry Form below!";
+                } else if(userMsg.includes('location') || userMsg.includes('where')) {
+                    aiDiv.innerText = "AnveX TechnoLab core physical node is situated in Dhangadhi, Far-West region, Nepal.";
+                } else {
+                    aiDiv.innerText = "Acknowledged. Your telemetry stream has been tagged. For immediate response logs, kindly send an inquiry form structure directly to our data pipeline.";
+                }
+                
+                messagesContainer.appendChild(aiDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }, 600);
+        }
     </script>
 </body>
 </html>
