@@ -163,7 +163,7 @@
                 </h1>
                 
                 <p class="text-gray-400 text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
-                    AnveX TechnoLab delivers professional ICT services, AI solutions, ERP systems, technical support and industry-ready training programs for students, schools, businesses and organizations.
+                    AnveX TechnoLab delivers professional ICT Services, AI Solutions, ERP Solutions, Technical Support and industry-ready training programs for students, schools, businesses and organizations.
                 </p>
                 
                 <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
@@ -445,7 +445,40 @@
                     <p class="text-sm text-gray-400">Enroll in professional courses or request an enterprise service architecture consultation.</p>
                 </div>
 
-                <form onsubmit="handleForm(event)" class="space-y-6">
+                <form action="https://formspree.io/f/mzdwpdqw" method="POST" class="space-y-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Full Name</label>
+            <input type="text" name="name" required class="w-full bg-darknavy/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyanaccent transition-all">
+        </div>
+        <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Email Address</label>
+            <input type="email" name="email" required class="w-full bg-darknavy/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyanaccent transition-all">
+        </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Phone / WhatsApp</label>
+            <input type="tel" name="phone" required class="w-full bg-darknavy/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyanaccent transition-all" placeholder="+977">
+        </div>
+        <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Inquiry Type</label>
+            <select name="inquiry_type" class="w-full bg-darknavy/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyanaccent transition-all">
+                <option value="course">Course Registration / Training</option>
+                <option value="service">Corporate ICT Framework Audit</option>
+                <option value="ai">Custom AI Agents Setup Consultation</option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Additional Specifications / Message</label>
+        <textarea name="message" rows="4" class="w-full bg-darknavy/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyanaccent transition-all" placeholder="Tell us about your requirements..."></textarea>
+    </div>
+    
+    <button type="submit" class="w-full bg-gradient-to-r from-cyanaccent to-blue-600 text-darknavy font-bold text-sm py-4 rounded-xl shadow-glow hover:brightness-110 transition-all uppercase tracking-wider">
+        Dispatch Inquiry Signal
+    </button>
+</form>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Full Name</label>
