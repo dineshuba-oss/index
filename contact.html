@@ -17,6 +17,7 @@
 <body>
 <header class="top">
   <canvas id="net" aria-hidden="true"></canvas>
+  <div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div>
   <div class="wrap">
     <nav>
       <a class="logo" href="index.html">AnveX<b>TechnoLab</b></a>
@@ -28,7 +29,7 @@
 <main>
   <section><div class="wrap"><div class="cgrid">
     <div class="card"><h3>AnveX TechnoLab</h3>
-      <p>Dhangadhi, Kailali, Sudurpashchim Province, Nepal</p>
+      <p>Dhangadhi, Kailali, Sudurpaschim Province, Nepal</p>
       <p>Phone: <a href="tel:+9779852675987">+977-9852675987</a></p>
       <p>Email: <a href="mailto:anvextechnolab@gmail.com">anvextechnolab@gmail.com</a></p>
       <p>Web: <a href="https://anvextechnolab.com.np">anvextechnolab.com.np</a></p>
@@ -36,20 +37,23 @@
     </div>
     <div class="card">
       <h3>Send an inquiry</h3>
-      <form id="f">
-        <label for="n">Full name</label><input id="n" required>
-        <label for="e">Email</label><input id="e" type="email">
-        <label for="ph">Phone or WhatsApp</label><input id="ph">
-        <label for="t">Inquiry type</label>
-        <select id="t"><option>Course registration</option><option>ICT services and consultation</option><option>Devices and security</option><option>Research and surveys</option></select>
-        <label for="m">Message</label><textarea id="m"></textarea>
-        <button class="btn main" type="submit">Send by email</button>
-      </form>
+      <iframe class="frame" title="AnveX TechnoLab inquiry form" src="https://form.jotform.com/263298051670056" loading="lazy" allow="geolocation; microphone; camera"></iframe>
+      <p class="note">Form not loading? <a href="https://form.jotform.com/263298051670056" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
     </div>
   </div></div></section>
+
+  <section><div class="wrap">
+    <h2>Common questions</h2>
+    <p class="sub">Quick answers before you get in touch.</p>
+    <details><summary>Do you offer online classes?</summary><p>AI for Teachers and IT Support Technician run online and physical. Cyber Security is physical only.</p></details>
+    <details><summary>Do you serve clients outside Dhangadhi?</summary><p>Yes. We work with organizations across Nepal.</p></details>
+    <details><summary>Can you supply and install CCTV, biometric and GPS devices?</summary><p>Yes. We supply, install, configure and maintain them.</p></details>
+    <details><summary>How will you reply to my inquiry?</summary><p>We contact you on the phone or WhatsApp number you submit in the form.</p></details>
+  </div></section>
 </main>
 
 <footer><div class="wrap"><span>© 2026 AnveX TechnoLab. All rights reserved.</span><span><a href="about.html">About</a> · <a href="services.html">Services</a> · <a href="training.html">Training</a> · <a href="contact.html">Contact</a></span></div></footer>
+<a class="wa" href="https://wa.me/9779852675987" aria-label="Chat on WhatsApp">WhatsApp</a>
 <script src="script.js"></script>
 </body>
 </html>

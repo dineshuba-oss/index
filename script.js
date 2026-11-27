@@ -25,6 +25,13 @@ top.addEventListener('pointerleave',function(){m.x=m.y=-999});
 addEventListener('resize',function(){size();if(reduce)draw()});
 size();draw();
 
+// scroll reveal
+document.documentElement.classList.add('js');
+var rv=document.querySelectorAll('.card,.cols>div,.step,details,section h2,.sub,.strip .wrap');
+if(reduce||!('IntersectionObserver' in window)){rv.forEach(function(e){e.classList.add('reveal','in')})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add('in');io.unobserve(t);setTimeout(function(){t.style.transitionDelay=''},1000)}})},{threshold:.12});
+rv.forEach(function(e,i){e.classList.add('reveal');e.style.transitionDelay=(i%4)*70+'ms';io.observe(e)})}
+
 // card glow
 document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
 

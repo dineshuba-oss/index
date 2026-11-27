@@ -12,3 +12,5 @@ GitHub ma upload garne tarika (repo: dineshuba-oss/index):
 5. 1-2 minute pachhi https://dineshuba-oss.github.io/index/ ma herna. Purano dekhiyo bhane Ctrl+F5 (phone ma browser cache clear).
 
 Purano site ka aru file (jastai images) repo ma chha bhane tyo as it is rahanchha.
+
+NOTE: Contact page ma inquiry form Jotform bata aauchha. Submission haru jotform.com > My Forms > "AnveX TechnoLab Inquiry" ma dekhinchhan.
