@@ -35,12 +35,25 @@ rv.forEach(function(e,i){e.classList.add('reveal');e.style.transitionDelay=(i%4)
 // card glow
 document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
 
-// inquiry form (contact page)
+// inquiry form: submits to Jotform in the background
+var $=function(i){return document.getElementById(i)};
+var JF={id:'263298051670056',map:{n:[3,'fullName',['first']],e:[4,'email'],ph:[5,'phoneNumber',['full']],t:[6,'inquiryType'],c:[7,'courseOfInterest'],m:[8,'message']}};
 var f=$('f');
-if(f)f.addEventListener('submit',function(ev){ev.preventDefault();
-var v=function(i){return $(i).value};
-var body='Name: '+v('n')+'\nEmail: '+v('e')+'\nPhone: '+v('ph')+'\n\n'+v('m');
-location.href='mailto:anvextechnolab@gmail.com?subject='+encodeURIComponent('Website inquiry: '+v('t'))+'&body='+encodeURIComponent(body)});
+if(f){var ifr=document.createElement('iframe');ifr.name='jf';ifr.hidden=true;ifr.title='';document.body.appendChild(ifr);var sent=false;
+ifr.addEventListener('load',function(){if(!sent)return;sent=false;f.reset();$('sb').disabled=false;$('sb').textContent='Send inquiry';$('fs').textContent='Thank you! We have received your inquiry and will contact you soon.'});
+f.addEventListener('submit',function(ev){ev.preventDefault();if($('hp').value)return;
+var jf=document.createElement('form');jf.method='post';jf.action='https://submit.jotform.com/submit/'+JF.id;jf.target='jf';jf.style.display='none';
+var add=function(k,v){var i=document.createElement('input');i.type='hidden';i.name=k;i.value=v;jf.appendChild(i)};
+add('formID',JF.id);add('simple_spc',JF.id+'-'+JF.id);
+Object.keys(JF.map).forEach(function(k){var d=JF.map[k],v=$(k).value,b='q'+d[0]+'_'+d[1];add(b,v);(d[2]||[]).forEach(function(s){add(b+'['+s+']',v)})});
+document.body.appendChild(jf);sent=true;$('sb').disabled=true;$('sb').textContent='Sending...';$('fs').textContent='';jf.submit();setTimeout(function(){jf.remove()},3000)})}
+
+// certificate lightbox
+var lb=document.getElementById('lb');
+if(lb){var li=lb.querySelector('img'),closeLb=function(){lb.hidden=true};
+document.querySelectorAll('.cert').forEach(function(b){b.addEventListener('click',function(){var im=b.querySelector('img');li.src=im.src;li.alt=im.alt;lb.hidden=false;lb.querySelector('.lbx').focus()})});
+lb.addEventListener('click',function(e){if(e.target!==li)closeLb()});
+addEventListener('keydown',function(e){if(e.key==='Escape')closeLb()})}
 
 // terminal (home page only)
 var tb=$('tbody');

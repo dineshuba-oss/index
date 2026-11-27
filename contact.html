@@ -37,8 +37,19 @@
     </div>
     <div class="card">
       <h3>Send an inquiry</h3>
-      <iframe class="frame" title="AnveX TechnoLab inquiry form" src="https://form.jotform.com/263298051670056" loading="lazy" allow="geolocation; microphone; camera"></iframe>
-      <p class="note">Form not loading? <a href="https://form.jotform.com/263298051670056" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+      <form id="f">
+        <label for="n">Full name</label><input id="n" autocomplete="name" required>
+        <label for="e">Email</label><input id="e" type="email" autocomplete="email">
+        <label for="ph">Phone or WhatsApp number</label><input id="ph" type="tel" autocomplete="tel" required>
+        <label for="t">Inquiry type</label>
+        <select id="t"><option>Course registration</option><option>ICT services and consultation</option><option>Devices and security</option><option>Research and surveys</option></select>
+        <label for="c">Course of interest (optional)</label>
+        <select id="c"><option>Not applicable</option><option>AI for Teachers</option><option>AI Prompt Engineering</option><option>AI with Excel</option><option>Cyber Security</option><option>IT Support Technician</option><option>Basic Computer Skills</option><option>Digital Marketing</option></select>
+        <label for="m">Message</label><textarea id="m"></textarea>
+        <input class="hp" id="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn main" type="submit" id="sb">Send inquiry</button>
+        <p id="fs" role="status"></p>
+      </form>
     </div>
   </div></div></section>
 
