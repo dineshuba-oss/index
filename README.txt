@@ -7,7 +7,7 @@ Files:
 GitHub ma upload garne tarika (repo: dineshuba-oss/index):
 1. Yo zip lai unzip garnus.
 2. github.com ma repo "index" kholnus > "Add file" > "Upload files".
-3. Unzip bhayeko sabai file ra "images" folder drag gareara halnus.
+3. Unzip bhayeko sabai file ra "images" folder (ekai file: og-card.jpg) drag gareara halnus.
 4. "Commit changes" thichnus. Purano index.html automatic replace hunchha.
 5. 1-2 minute pachhi https://dineshuba-oss.github.io/index/ ma herna. Purano dekhiyo bhane Ctrl+F5 (phone ma browser cache clear).
 
