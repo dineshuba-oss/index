@@ -55,10 +55,22 @@ document.querySelectorAll('.cert').forEach(function(b){b.addEventListener('click
 lb.addEventListener('click',function(e){if(e.target!==li)closeLb()});
 addEventListener('keydown',function(e){if(e.key==='Escape')closeLb()})}
 
+// mobile menu
+var mb=document.querySelector('.menu');
+if(mb){var nv=mb.closest('nav');mb.addEventListener('click',function(){var o=nv.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+nv.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){nv.classList.remove('open');mb.setAttribute('aria-expanded','false')})})}
+
+// animated hero
+var h1=document.getElementById('h1'),fl=document.querySelectorAll('.flow li');
+if(h1){var ln=h1.querySelectorAll('.line');
+if(reduce){fl.forEach(function(x){x.classList.add('on')})}
+else{var idx=0,tickFn=function(){ln.forEach(function(l,i){l.classList.toggle('hot',i===idx)});fl.forEach(function(x,i){x.classList.toggle('on',i===idx);x.classList.toggle('past',i<idx)});idx=(idx+1)%ln.length};
+setTimeout(function(){h1.classList.add('cycle');tickFn();setInterval(tickFn,2400)},1400)}}
+
 // terminal (home page only)
 var tb=$('tbody');
 if(tb){
-var steps=[['anvex build --type web-app','built, tested and deployed'],['anvex install --devices cctv,biometric,gps','installed and configured on site'],['anvex send --channel bulk-sms','delivered via licensed telecom partners'],['anvex survey --method kii,fgd','data collected and analysed'],['anvex train --course ai-prompt-engineering','batch ready in Dhangadhi']];
+var steps=[['anvex build --type web-app','built, tested and deployed'],['anvex install --devices cctv,biometric,gps','installed and configured on site'],['anvex train --course ai-prompt-engineering','batch ready in Dhangadhi'],['anvex send --channel bulk-sms','delivered via licensed telecom partners'],['anvex survey --method kii,fgd','data collected and analysed']];
 var esc=function(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')};
 var render=function(done,typing){var o='';done.forEach(function(s){o+='<span class="p">$</span> '+esc(s[0])+'\n<span class="ok">ok</span>  '+esc(s[1])+'\n\n'});
 if(typing!==null)o+='<span class="p">$</span> '+esc(typing)+'<span class="cur"></span>';tb.innerHTML=o};
